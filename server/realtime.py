@@ -1,6 +1,7 @@
 from tkinter import *
 import numpy as np
 
+import sys
 from classification import TsNN
 from state import MotionState
 from motion import Motion
@@ -233,6 +234,10 @@ class RealtimeViewer:
 
 
 if __name__ == "__main__":
-    motions = ["Forward", "Left", "Right"]
-    model = TsNN(30, threshold=3.4, augmentation=None)
-    RealtimeViewer(Motion(motions, "192.168.178.35", model, training_duration=5.0)).run()
+    if len(sys.argv) == 2:
+        ip = sys.argv[1]
+        motions = ["Forward", "Left", "Right"]
+        model = TsNN(30, threshold=3.4, augmentation=None)
+        RealtimeViewer(Motion(motions, ip, model, training_duration=5.0)).run()
+    else:
+        print("No ip-address specified.")
