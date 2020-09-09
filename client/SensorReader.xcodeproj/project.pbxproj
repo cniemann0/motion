@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84019BEE23E36768008F5C5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019BED23E36768008F5C5B /* AppDelegate.swift */; };
+		84019BF023E36768008F5C5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019BEF23E36768008F5C5B /* SceneDelegate.swift */; };
+		84019BF523E36768008F5C5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84019BF323E36768008F5C5B /* Main.storyboard */; };
+		84019BF823E36768008F5C5B /* SensorReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84019BF623E36768008F5C5B /* SensorReader.xcdatamodeld */; };
+		84019BFA23E3676A008F5C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84019BF923E3676A008F5C5B /* Assets.xcassets */; };
+		84019BFD23E3676A008F5C5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84019BFB23E3676A008F5C5B /* LaunchScreen.storyboard */; };
+		84019C0823E3676A008F5C5B /* SensorReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C0723E3676A008F5C5B /* SensorReaderTests.swift */; };
+		84019C1323E3676A008F5C5B /* SensorReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C1223E3676A008F5C5B /* SensorReaderUITests.swift */; };
+		84019C2523E37132008F5C5B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C2423E37132008F5C5B /* MainTabBarController.swift */; };
+		84019C2923E37829008F5C5B /* CaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C2823E37829008F5C5B /* CaptureController.swift */; };
+		84019C2D23E37D9A008F5C5B /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C2C23E37D9A008F5C5B /* BrowseController.swift */; };
+		84019C3323E477E0008F5C5B /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C3223E477E0008F5C5B /* Measurement.swift */; };
+		84019C3523E47B1D008F5C5B /* MeasurementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C3423E47B1D008F5C5B /* MeasurementManager.swift */; };
+		84019C3723E47F87008F5C5B /* ProcessMeasurementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C3623E47F87008F5C5B /* ProcessMeasurementProtocol.swift */; };
+		84019C3D23E49696008F5C5B /* MeasurementGraph.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84019C3C23E49696008F5C5B /* MeasurementGraph.xib */; };
+		84019C3F23E496CD008F5C5B /* MeasurementGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C3E23E496CC008F5C5B /* MeasurementGraph.swift */; };
+		84019C4123E4D580008F5C5B /* MeasurementGraphCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84019C4023E4D580008F5C5B /* MeasurementGraphCanvas.xib */; };
+		84019C4323E4D5A6008F5C5B /* MeasurementGraphCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C4223E4D5A6008F5C5B /* MeasurementGraphCanvas.swift */; };
+		84019C4823E5F478008F5C5B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84019C4723E5F478008F5C5B /* CustomView.swift */; };
+		841AB5202409BC7B0009F4A5 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AB51F2409BC7B0009F4A5 /* PersistenceManager.swift */; };
+		841AB5222409DE570009F4A5 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AB5212409DE570009F4A5 /* Util.swift */; };
+		841AB5242411646A0009F4A5 /* MotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AB5232411646A0009F4A5 /* MotionController.swift */; };
+		841AB5272417C1EE0009F4A5 /* MotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AB5262417C1EE0009F4A5 /* MotionCell.swift */; };
+		841AB529241A84ED0009F4A5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AB528241A84ED0009F4A5 /* Config.swift */; };
+		845479162443562600BF1944 /* RecordMotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845479152443562600BF1944 /* RecordMotionCell.swift */; };
+		846C45DC2440BD7D0008D99C /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C45DB2440BD7D0008D99C /* WebSocket.swift */; };
+		846C45DF2440BE8D0008D99C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C45DE2440BE8D0008D99C /* libz.tbd */; };
+		846C45E12440C8BB0008D99C /* TransmitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C45E02440C8BB0008D99C /* TransmitController.swift */; };
+		84CCA24F23EA38F800AD0D72 /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CCA24E23EA38F800AD0D72 /* RecordingCell.swift */; };
+		84F9BF7323E6FB240017E5C4 /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9BF7223E6FB240017E5C4 /* RecordingController.swift */; };
+		84F9BF7523E6FE5A0017E5C4 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9BF7423E6FE5A0017E5C4 /* Recording.swift */; };
+		84F9BF7A23E768A30017E5C4 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9BF7923E768A30017E5C4 /* ProgressCircle.swift */; };
+		84F9BF7C23E768BF0017E5C4 /* ProgressCircle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F9BF7B23E768BF0017E5C4 /* ProgressCircle.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84019C0423E3676A008F5C5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84019BE223E36768008F5C5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84019BE923E36768008F5C5B;
+			remoteInfo = SensorReader;
+		};
+		84019C0F23E3676A008F5C5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84019BE223E36768008F5C5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84019BE923E36768008F5C5B;
+			remoteInfo = SensorReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84019BEA23E36768008F5C5B /* SensorReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84019BED23E36768008F5C5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84019BEF23E36768008F5C5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84019BF423E36768008F5C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84019BF723E36768008F5C5B /* SensorReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SensorReader.xcdatamodel; sourceTree = "<group>"; };
+		84019BF923E3676A008F5C5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84019BFC23E3676A008F5C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84019BFE23E3676A008F5C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84019C0323E3676A008F5C5B /* SensorReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84019C0723E3676A008F5C5B /* SensorReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorReaderTests.swift; sourceTree = "<group>"; };
+		84019C0923E3676A008F5C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84019C0E23E3676A008F5C5B /* SensorReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84019C1223E3676A008F5C5B /* SensorReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorReaderUITests.swift; sourceTree = "<group>"; };
+		84019C1423E3676A008F5C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84019C2423E37132008F5C5B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		84019C2823E37829008F5C5B /* CaptureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureController.swift; sourceTree = "<group>"; };
+		84019C2C23E37D9A008F5C5B /* BrowseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseController.swift; sourceTree = "<group>"; };
+		84019C3223E477E0008F5C5B /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		84019C3423E47B1D008F5C5B /* MeasurementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementManager.swift; sourceTree = "<group>"; };
+		84019C3623E47F87008F5C5B /* ProcessMeasurementProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessMeasurementProtocol.swift; sourceTree = "<group>"; };
+		84019C3C23E49696008F5C5B /* MeasurementGraph.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementGraph.xib; sourceTree = "<group>"; };
+		84019C3E23E496CC008F5C5B /* MeasurementGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementGraph.swift; sourceTree = "<group>"; };
+		84019C4023E4D580008F5C5B /* MeasurementGraphCanvas.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementGraphCanvas.xib; sourceTree = "<group>"; };
+		84019C4223E4D5A6008F5C5B /* MeasurementGraphCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementGraphCanvas.swift; sourceTree = "<group>"; };
+		84019C4723E5F478008F5C5B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		841AB51F2409BC7B0009F4A5 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		841AB5212409DE570009F4A5 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		841AB5232411646A0009F4A5 /* MotionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionController.swift; sourceTree = "<group>"; };
+		841AB5262417C1EE0009F4A5 /* MotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCell.swift; sourceTree = "<group>"; };
+		841AB528241A84ED0009F4A5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		845479152443562600BF1944 /* RecordMotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordMotionCell.swift; sourceTree = "<group>"; };
+		846C45DB2440BD7D0008D99C /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		846C45DE2440BE8D0008D99C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		846C45E02440C8BB0008D99C /* TransmitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransmitController.swift; sourceTree = "<group>"; };
+		84CCA24E23EA38F800AD0D72 /* RecordingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
+		84F9BF7223E6FB240017E5C4 /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingController.swift; sourceTree = "<group>"; };
+		84F9BF7423E6FE5A0017E5C4 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		84F9BF7923E768A30017E5C4 /* ProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
+		84F9BF7B23E768BF0017E5C4 /* ProgressCircle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressCircle.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84019BE723E36768008F5C5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846C45DF2440BE8D0008D99C /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84019C0023E3676A008F5C5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84019C0B23E3676A008F5C5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84019BE123E36768008F5C5B = {
+			isa = PBXGroup;
+			children = (
+				84019BEC23E36768008F5C5B /* SensorReader */,
+				84019C0623E3676A008F5C5B /* SensorReaderTests */,
+				84019C1123E3676A008F5C5B /* SensorReaderUITests */,
+				84019BEB23E36768008F5C5B /* Products */,
+				846C45DD2440BE8D0008D99C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84019BEB23E36768008F5C5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84019BEA23E36768008F5C5B /* SensorReader.app */,
+				84019C0323E3676A008F5C5B /* SensorReaderTests.xctest */,
+				84019C0E23E3676A008F5C5B /* SensorReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84019BEC23E36768008F5C5B /* SensorReader */ = {
+			isa = PBXGroup;
+			children = (
+				846C45DA2440BD4F0008D99C /* SwiftWebSocket */,
+				841AB525241167940009F4A5 /* Cells */,
+				841AB51E2409BC5C0009F4A5 /* Persistence */,
+				84F9BF7823E7688C0017E5C4 /* ProgressCircle */,
+				84019C4423E5F1E4008F5C5B /* Util */,
+				84019C3B23E49674008F5C5B /* MeasurementGraph */,
+				84019C3123E47794008F5C5B /* Transmit */,
+				84019C3023E4778C008F5C5B /* Record */,
+				84019C2F23E47783008F5C5B /* Measure */,
+				84019C2123E36A23008F5C5B /* Delegates */,
+				84019C2023E36A0C008F5C5B /* ViewControllers */,
+				84019BF323E36768008F5C5B /* Main.storyboard */,
+				84019BF923E3676A008F5C5B /* Assets.xcassets */,
+				84019BFB23E3676A008F5C5B /* LaunchScreen.storyboard */,
+				84019BFE23E3676A008F5C5B /* Info.plist */,
+				84019BF623E36768008F5C5B /* SensorReader.xcdatamodeld */,
+			);
+			path = SensorReader;
+			sourceTree = "<group>";
+		};
+		84019C0623E3676A008F5C5B /* SensorReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				84019C0723E3676A008F5C5B /* SensorReaderTests.swift */,
+				84019C0923E3676A008F5C5B /* Info.plist */,
+			);
+			path = SensorReaderTests;
+			sourceTree = "<group>";
+		};
+		84019C1123E3676A008F5C5B /* SensorReaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84019C1223E3676A008F5C5B /* SensorReaderUITests.swift */,
+				84019C1423E3676A008F5C5B /* Info.plist */,
+			);
+			path = SensorReaderUITests;
+			sourceTree = "<group>";
+		};
+		84019C2023E36A0C008F5C5B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84019C2423E37132008F5C5B /* MainTabBarController.swift */,
+				84019C2823E37829008F5C5B /* CaptureController.swift */,
+				84019C2C23E37D9A008F5C5B /* BrowseController.swift */,
+				84F9BF7223E6FB240017E5C4 /* RecordingController.swift */,
+				841AB5232411646A0009F4A5 /* MotionController.swift */,
+				846C45E02440C8BB0008D99C /* TransmitController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84019C2123E36A23008F5C5B /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				84019BEF23E36768008F5C5B /* SceneDelegate.swift */,
+				84019BED23E36768008F5C5B /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		84019C2F23E47783008F5C5B /* Measure */ = {
+			isa = PBXGroup;
+			children = (
+				84019C3223E477E0008F5C5B /* Measurement.swift */,
+				84019C3423E47B1D008F5C5B /* MeasurementManager.swift */,
+				84019C3623E47F87008F5C5B /* ProcessMeasurementProtocol.swift */,
+			);
+			path = Measure;
+			sourceTree = "<group>";
+		};
+		84019C3023E4778C008F5C5B /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				84F9BF7423E6FE5A0017E5C4 /* Recording.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		84019C3123E47794008F5C5B /* Transmit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transmit;
+			sourceTree = "<group>";
+		};
+		84019C3B23E49674008F5C5B /* MeasurementGraph */ = {
+			isa = PBXGroup;
+			children = (
+				84019C3C23E49696008F5C5B /* MeasurementGraph.xib */,
+				84019C3E23E496CC008F5C5B /* MeasurementGraph.swift */,
+				84019C4023E4D580008F5C5B /* MeasurementGraphCanvas.xib */,
+				84019C4223E4D5A6008F5C5B /* MeasurementGraphCanvas.swift */,
+			);
+			path = MeasurementGraph;
+			sourceTree = "<group>";
+		};
+		84019C4423E5F1E4008F5C5B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				84019C4723E5F478008F5C5B /* CustomView.swift */,
+				841AB5212409DE570009F4A5 /* Util.swift */,
+				841AB528241A84ED0009F4A5 /* Config.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		841AB51E2409BC5C0009F4A5 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				841AB51F2409BC7B0009F4A5 /* PersistenceManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		841AB525241167940009F4A5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84CCA24E23EA38F800AD0D72 /* RecordingCell.swift */,
+				841AB5262417C1EE0009F4A5 /* MotionCell.swift */,
+				845479152443562600BF1944 /* RecordMotionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		846C45DA2440BD4F0008D99C /* SwiftWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				846C45DB2440BD7D0008D99C /* WebSocket.swift */,
+			);
+			path = SwiftWebSocket;
+			sourceTree = "<group>";
+		};
+		846C45DD2440BE8D0008D99C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				846C45DE2440BE8D0008D99C /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84F9BF7823E7688C0017E5C4 /* ProgressCircle */ = {
+			isa = PBXGroup;
+			children = (
+				84F9BF7923E768A30017E5C4 /* ProgressCircle.swift */,
+				84F9BF7B23E768BF0017E5C4 /* ProgressCircle.xib */,
+			);
+			path = ProgressCircle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84019BE923E36768008F5C5B /* SensorReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84019C1723E3676A008F5C5B /* Build configuration list for PBXNativeTarget "SensorReader" */;
+			buildPhases = (
+				84019BE623E36768008F5C5B /* Sources */,
+				84019BE723E36768008F5C5B /* Frameworks */,
+				84019BE823E36768008F5C5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SensorReader;
+			productName = SensorReader;
+			productReference = 84019BEA23E36768008F5C5B /* SensorReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84019C0223E3676A008F5C5B /* SensorReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84019C1A23E3676A008F5C5B /* Build configuration list for PBXNativeTarget "SensorReaderTests" */;
+			buildPhases = (
+				84019BFF23E3676A008F5C5B /* Sources */,
+				84019C0023E3676A008F5C5B /* Frameworks */,
+				84019C0123E3676A008F5C5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84019C0523E3676A008F5C5B /* PBXTargetDependency */,
+			);
+			name = SensorReaderTests;
+			productName = SensorReaderTests;
+			productReference = 84019C0323E3676A008F5C5B /* SensorReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84019C0D23E3676A008F5C5B /* SensorReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84019C1D23E3676A008F5C5B /* Build configuration list for PBXNativeTarget "SensorReaderUITests" */;
+			buildPhases = (
+				84019C0A23E3676A008F5C5B /* Sources */,
+				84019C0B23E3676A008F5C5B /* Frameworks */,
+				84019C0C23E3676A008F5C5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84019C1023E3676A008F5C5B /* PBXTargetDependency */,
+			);
+			name = SensorReaderUITests;
+			productName = SensorReaderUITests;
+			productReference = 84019C0E23E3676A008F5C5B /* SensorReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84019BE223E36768008F5C5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Niemann Studios";
+				TargetAttributes = {
+					84019BE923E36768008F5C5B = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					84019C0223E3676A008F5C5B = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 84019BE923E36768008F5C5B;
+					};
+					84019C0D23E3676A008F5C5B = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 84019BE923E36768008F5C5B;
+					};
+				};
+			};
+			buildConfigurationList = 84019BE523E36768008F5C5B /* Build configuration list for PBXProject "SensorReader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84019BE123E36768008F5C5B;
+			productRefGroup = 84019BEB23E36768008F5C5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84019BE923E36768008F5C5B /* SensorReader */,
+				84019C0223E3676A008F5C5B /* SensorReaderTests */,
+				84019C0D23E3676A008F5C5B /* SensorReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84019BE823E36768008F5C5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F9BF7C23E768BF0017E5C4 /* ProgressCircle.xib in Resources */,
+				84019BFD23E3676A008F5C5B /* LaunchScreen.storyboard in Resources */,
+				84019C3D23E49696008F5C5B /* MeasurementGraph.xib in Resources */,
+				84019BFA23E3676A008F5C5B /* Assets.xcassets in Resources */,
+				84019C4123E4D580008F5C5B /* MeasurementGraphCanvas.xib in Resources */,
+				84019BF523E36768008F5C5B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84019C0123E3676A008F5C5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84019C0C23E3676A008F5C5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84019BE623E36768008F5C5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84019BEE23E36768008F5C5B /* AppDelegate.swift in Sources */,
+				841AB5222409DE570009F4A5 /* Util.swift in Sources */,
+				84019BF823E36768008F5C5B /* SensorReader.xcdatamodeld in Sources */,
+				846C45DC2440BD7D0008D99C /* WebSocket.swift in Sources */,
+				84019C2523E37132008F5C5B /* MainTabBarController.swift in Sources */,
+				845479162443562600BF1944 /* RecordMotionCell.swift in Sources */,
+				841AB5242411646A0009F4A5 /* MotionController.swift in Sources */,
+				84F9BF7323E6FB240017E5C4 /* RecordingController.swift in Sources */,
+				84F9BF7523E6FE5A0017E5C4 /* Recording.swift in Sources */,
+				84F9BF7A23E768A30017E5C4 /* ProgressCircle.swift in Sources */,
+				84019C2D23E37D9A008F5C5B /* BrowseController.swift in Sources */,
+				84019C3523E47B1D008F5C5B /* MeasurementManager.swift in Sources */,
+				84019C4823E5F478008F5C5B /* CustomView.swift in Sources */,
+				84019BF023E36768008F5C5B /* SceneDelegate.swift in Sources */,
+				84019C2923E37829008F5C5B /* CaptureController.swift in Sources */,
+				841AB5202409BC7B0009F4A5 /* PersistenceManager.swift in Sources */,
+				84CCA24F23EA38F800AD0D72 /* RecordingCell.swift in Sources */,
+				84019C3F23E496CD008F5C5B /* MeasurementGraph.swift in Sources */,
+				841AB5272417C1EE0009F4A5 /* MotionCell.swift in Sources */,
+				841AB529241A84ED0009F4A5 /* Config.swift in Sources */,
+				846C45E12440C8BB0008D99C /* TransmitController.swift in Sources */,
+				84019C3723E47F87008F5C5B /* ProcessMeasurementProtocol.swift in Sources */,
+				84019C3323E477E0008F5C5B /* Measurement.swift in Sources */,
+				84019C4323E4D5A6008F5C5B /* MeasurementGraphCanvas.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84019BFF23E3676A008F5C5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84019C0823E3676A008F5C5B /* SensorReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84019C0A23E3676A008F5C5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84019C1323E3676A008F5C5B /* SensorReaderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84019C0523E3676A008F5C5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84019BE923E36768008F5C5B /* SensorReader */;
+			targetProxy = 84019C0423E3676A008F5C5B /* PBXContainerItemProxy */;
+		};
+		84019C1023E3676A008F5C5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84019BE923E36768008F5C5B /* SensorReader */;
+			targetProxy = 84019C0F23E3676A008F5C5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84019BF323E36768008F5C5B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84019BF423E36768008F5C5B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84019BFB23E3676A008F5C5B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84019BFC23E3676A008F5C5B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84019C1523E3676A008F5C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84019C1623E3676A008F5C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84019C1823E3676A008F5C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3K8635A22;
+				INFOPLIST_FILE = SensorReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NiemannStudios.SensorReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84019C1923E3676A008F5C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3K8635A22;
+				INFOPLIST_FILE = SensorReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NiemannStudios.SensorReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84019C1B23E3676A008F5C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3K8635A22;
+				INFOPLIST_FILE = SensorReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NiemannStudios.SensorReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SensorReader.app/SensorReader";
+			};
+			name = Debug;
+		};
+		84019C1C23E3676A008F5C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3K8635A22;
+				INFOPLIST_FILE = SensorReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NiemannStudios.SensorReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SensorReader.app/SensorReader";
+			};
+			name = Release;
+		};
+		84019C1E23E3676A008F5C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3K8635A22;
+				INFOPLIST_FILE = SensorReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NiemannStudios.SensorReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SensorReader;
+			};
+			name = Debug;
+		};
+		84019C1F23E3676A008F5C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3K8635A22;
+				INFOPLIST_FILE = SensorReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NiemannStudios.SensorReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SensorReader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84019BE523E36768008F5C5B /* Build configuration list for PBXProject "SensorReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84019C1523E3676A008F5C5B /* Debug */,
+				84019C1623E3676A008F5C5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84019C1723E3676A008F5C5B /* Build configuration list for PBXNativeTarget "SensorReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84019C1823E3676A008F5C5B /* Debug */,
+				84019C1923E3676A008F5C5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84019C1A23E3676A008F5C5B /* Build configuration list for PBXNativeTarget "SensorReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84019C1B23E3676A008F5C5B /* Debug */,
+				84019C1C23E3676A008F5C5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84019C1D23E3676A008F5C5B /* Build configuration list for PBXNativeTarget "SensorReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84019C1E23E3676A008F5C5B /* Debug */,
+				84019C1F23E3676A008F5C5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84019BF623E36768008F5C5B /* SensorReader.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84019BF723E36768008F5C5B /* SensorReader.xcdatamodel */,
+			);
+			currentVersion = 84019BF723E36768008F5C5B /* SensorReader.xcdatamodel */;
+			path = SensorReader.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 84019BE223E36768008F5C5B /* Project object */;
+}
