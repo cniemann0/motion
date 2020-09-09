@@ -1,2 +1,3 @@
 # motion
-The server component of a real-time smartphone motion data framework.
+
+A framework that allows the real-time control of Python applications with smartphone motion data. 
